@@ -11,4 +11,4 @@ app.use(require('./api/user.api'));
 app.use(require('./api/msg.api'));
 app.use(compression())
 app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port||process.env.PORT, () => console.log(`Example app listening on port ${port}!`))

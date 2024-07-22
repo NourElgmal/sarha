@@ -5,6 +5,6 @@ module.exports.addphoto=async(req,res)=>{
     res.json({'msg':'add photo secc'});
 }
 module.exports.getphoto=async(req,res)=>{
-    let ph=photomodule.find({});
+    let ph=await photomodule.find({});
     res.json({"msg":ph});
 }

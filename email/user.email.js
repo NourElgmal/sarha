@@ -18,7 +18,7 @@ module.exports.sendemail = async (obtion) => {
       html: `
       <div class="green-div">
         hellow in saraha please enter 
-        <a href="http://localhost:3000/verfay/${obtion.t}">verfie</a>
+        <a href="https://sarha.vercel.app/verfay/${obtion.t}">verfie</a>
     </div>
       `, // html body
     });

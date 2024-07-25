@@ -13,7 +13,7 @@ try{
     } else {
     bcrypt.hash(pass,4,async(err,hash)=>{
         await mod.insertMany({name,email,pass:hash,age});
-        const t= jwt.sign({"email":email},"nour",{expiresIn:60});
+        const t= jwt.sign({"email":email},"nour",{expiresIn:60*60});
         sendemail({
             email,
             t,

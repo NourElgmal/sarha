@@ -1,6 +1,10 @@
-const { addphoto, getphoto } = require('../service/photo.service');
+const { up } = require('../common/upimage');
+const { getphoto, addPhoto } = require('../service/photo.service');
 
-const express=require('express').Router();
-express.post("/addphoto",addphoto);
-express.get("/getphoto",getphoto);
-module.exports=express;
+const express = require('express');
+const router = express.Router();
+
+router.post("/addphoto", up(), addPhoto);
+router.get("/getphoto", getphoto);
+
+module.exports = router;

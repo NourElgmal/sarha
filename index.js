@@ -5,6 +5,7 @@ const connct = require('./config/config');
 const app = express()
 const port = 3000
 connct();
+app.use(express.static('uploads'))
 app.use(express.json());
 app.use(cors());
 app.use(require('./api/user.api'));

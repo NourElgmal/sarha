@@ -12,7 +12,7 @@ module.exports.addPhoto = async (req, res) => {
       res.status(400).json({ msg: "Only image files are allowed" });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error adding photo:', error);
     res.status(500).json({ msg: "Server error", error: error.message });
   }
 }
@@ -22,7 +22,7 @@ module.exports.getphoto = async (req, res) => {
     let photos = await photomodule.find({});
     res.json({ msg: photos });
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching photos:', error);
     res.status(500).json({ msg: "Server error", error: error.message });
   }
 }
